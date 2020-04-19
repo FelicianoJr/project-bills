@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: createTableBills
+      author: feliciano
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: billsPK
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: name
+                  type: VARCHAR(50)
+              - column:
+                  name: bill_amount
+                  type: DECIMAL(10,2)
+              - column:
+                  name: corrected_value
+                  type: DECIMAL(10,2)
+              - column:
+                  name: invoice_date
+                  type: DATE
+              - column:
+                  name: payment_date
+                  type: DATE
+              - column:
+                  name: days_of_delay
+                  type: INT
+            tableName: bills
