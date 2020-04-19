@@ -16,8 +16,8 @@ class MoreThreeDaysTest {
         createBillsDTO.setDaysOfDelay(4);
         createBillsDTO.setBillAmount(new BigDecimal(1500));
 
-        ProcessInterest processInterest = new MoreThreeDays(createBillsDTO);
-        BigDecimal tax = processInterest.calculate();
+        ProcessRate processRate = new MoreThreeDays(createBillsDTO);
+        BigDecimal tax = processRate.calculate();
 
         assertEquals(new BigDecimal("45.40").setScale(2), tax);
     }

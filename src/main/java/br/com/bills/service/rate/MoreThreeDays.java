@@ -5,7 +5,7 @@ import br.com.bills.dto.CreateBillsDTO;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class MoreThreeDays implements ProcessInterest {
+public class MoreThreeDays implements ProcessRate {
 
     private static final double FINE = 0.03;
     private static final double INTEREST_PER_DAY = 0.002;

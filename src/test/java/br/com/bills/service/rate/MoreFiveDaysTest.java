@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MoreFiveDaysTest {
 
@@ -16,8 +16,8 @@ class MoreFiveDaysTest {
         createBillsDTO.setDaysOfDelay(6);
         createBillsDTO.setBillAmount(new BigDecimal(2500));
 
-        ProcessInterest processInterest = new MoreFiveDays(createBillsDTO);
-        BigDecimal tax = processInterest.calculate();
+        ProcessRate processRate = new MoreFiveDays(createBillsDTO);
+        BigDecimal tax = processRate.calculate();
 
         assertEquals(new BigDecimal("126.50").setScale(2), tax);
     }

@@ -2,19 +2,14 @@ package br.com.bills.controller;
 
 import br.com.bills.model.Bills;
 import br.com.bills.service.BillsService;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.web.util.UriComponents;
-import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +45,7 @@ public class BillsControllerTest {
     }
 
     @Test
-    public void testAllControllerSucess() throws Exception {
+    public void testFindAllControllerSucess() throws Exception {
         List<Bills> bills = new ArrayList<>();
         when(billsService.findAll()).thenReturn(bills);
 
