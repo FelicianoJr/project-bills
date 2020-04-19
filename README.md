@@ -1,7 +1,7 @@
 # project-bills
 
 ### Sobre o Projeto
-O projeto consite no gerenciamento de contas financeiras, onde as principais regras é aplicar multa em contas com atraso.
+O projeto consiste no gerenciamento de contas financeiras, onde as principais regras são aplicações de multas em contas com atrasos de pagamentos.
 
 ### Frameworks do Projeto
 * Spring Boot
